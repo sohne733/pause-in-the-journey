@@ -1,0 +1,77 @@
+body {
+    font-family: "Playfair Display", serif; /* Font family for the entire body */
+}
+
+/* General styles for the heading */
+h1 {
+    color: #3a67b1; /* Text color */
+    font-size: 100px; /* Font size */
+    font-weight: 400;
+    margin: 0; /* Remove default margins */
+    text-align: right; /* Center-align the text */
+}
+
+h1 span {
+    display: block; /* Makes each span take the full width */
+    line-height: 1; /* Control space between lines */
+}
+
+/* Photo container */
+.photo-container {
+    position: relative; /* Establishes a positioning context for child elements */
+}
+
+/* Images */
+.responsive-image {
+    width: 40%; /* Adjust this value to make the image smaller */
+    height: auto; /* Maintain the aspect ratio */
+    max-width: 40%; /* Limits the image to 40% of the screen width */
+    display: block; /* Remove any extra space below the image */
+    transform: translateY(-25%);
+    float: left; /* Align image to the left */
+    transition: filter 0.3s ease; /* Smooth transition for blur effect */
+}
+
+/* Image hover effect */
+.photo-container:hover .responsive-image {
+    filter: blur(5px); /* Apply blur effect on hover */
+}
+/* Hover text styles */
+.hover-text1,
+.hover-text2,
+.hover-text3,
+.hover-text4 {
+    display: none; /* Initially hide the text */
+    position: absolute; /* Position them over the image */
+    color: #3a67b1; /* Text color */
+    font-size: 16px; /* Font size */
+    width: 600px; /* Set the width */
+    text-align: left; /* Align the text to the left */
+    line-height: 1.5; /* Line height for readability */
+    opacity: 0; /* Start with transparent text */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition for opacity */
+}
+
+.hover-text1{
+    transform: translate(130%, 10%);
+}
+.hover-text2{
+    transform: translate(130%, 120%);
+}
+.hover-text3{
+    transform: translate(130%, 190%);
+}
+.hover-text4{
+    transform: translate(130%, 450%);
+}
+
+/* Show the paragraphs when hovering over the photo container */
+.photo-container:hover .hover-text1,
+.photo-container:hover .hover-text2,
+.photo-container:hover .hover-text3,
+.photo-container:hover .hover-text4 {
+    display: block; /* Ensure it's block when visible */
+    opacity: 1; /* Make them fully visible */
+}
+
+
